@@ -12,7 +12,7 @@ const {
 
 const { moviesMock } = require('../utils/mocks/movies');
 
-describe.only("services - movies", function () {
+describe("services - movies", function () {
     const MoviesServices = proxyquire('../services/movies', {
         '../lib/mongo': MongoLibMock
     });

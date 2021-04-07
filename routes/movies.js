@@ -32,10 +32,10 @@ function moviesApi(app) {
     router.get("/:movieId", validationHandler({ movieId: movieIdSchema}, 'params'), async function(req,res,next){
         const { movieId } = req.params;
         try {
-            const movies = await moviesService.getMovie({ movieId });
+            const movie = await moviesService.getMovie({ movieId });
 
             res.status(200).json({
-                data: movies,
+                data: movie,
                 message: 'movie retrieved'
             });
         } catch(err){
