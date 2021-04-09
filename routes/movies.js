@@ -17,7 +17,7 @@ const {
 
 function moviesApi(app) {
     const router = express.Router();
-    app.use("/api/movies", router);
+    app.use("/", router);
 
     const moviesService = new MoviesServices;
 
