@@ -1,0 +1,214 @@
+import magnitude from './Presentation/Controllers/Magnitude/types'
+import instrument from './Presentation/Controllers/Instrument/types'
+import business from './Presentation/Controllers/Business/types'
+import certificate from './Presentation/Controllers/Certificate/types'
+import calibration from './Presentation/Controllers/Calibration/types'
+import area from './Presentation/Controllers/Area/types'
+import unit from './Presentation/Controllers/Unit/types'
+import alert from './Presentation/Controllers/Alert/types'
+import configuration from './Presentation/Controllers/Configuration/types'
+import blue from './Presentation/Controllers/Blue/types'
+import usdt from './Presentation/Controllers/Usdt/types'
+import wire from './Presentation/Controllers/Wire/types'
+import investment from './Presentation/Controllers/Investment/types'
+import transfer from './Presentation/Controllers/Transfer/types'
+import check from './Presentation/Controllers/Check/types'
+import account from './Presentation/Controllers/Account/types'
+import movement from './Presentation/Controllers/Movement/types'
+import interest from './Presentation/Controllers/Interest/types'
+import loan from './Presentation/Controllers/Loan/types'
+import box from './Presentation/Controllers/Box/types'
+import item from './Presentation/Controllers/Item/types'
+import purchase from './Presentation/Controllers/Purchase/types'
+import sale from './Presentation/Controllers/Sale/types'
+import plan from './Presentation/Controllers/Plan/types'
+import shipping from './Presentation/Controllers/Shipping/types'
+import code from './Presentation/Controllers/Code/types'
+import strain from './Presentation/Controllers/Strain/types'
+import type from './Presentation/Controllers/Type/types'
+import store from './Presentation/Controllers/Store/types'
+import information from './Presentation/Controllers/Information/types'
+import tag from './Presentation/Controllers/Tag/types'
+import section from './Presentation/Controllers/Section/types'
+import entity from './Presentation/Controllers/Entity/types'
+
+let returnEntities: any = {}
+function jsonConcat(o1, o2) { for (var key in o2) { o1[key] = o2[key]; }; return o1; }
+
+returnEntities = jsonConcat(returnEntities, magnitude);
+returnEntities = jsonConcat(returnEntities, instrument);
+returnEntities = jsonConcat(returnEntities, business);
+returnEntities = jsonConcat(returnEntities, certificate);
+returnEntities = jsonConcat(returnEntities, calibration);
+returnEntities = jsonConcat(returnEntities, area);
+returnEntities = jsonConcat(returnEntities, unit);
+returnEntities = jsonConcat(returnEntities, alert);
+returnEntities = jsonConcat(returnEntities, configuration);
+returnEntities = jsonConcat(returnEntities, blue);
+returnEntities = jsonConcat(returnEntities, usdt);
+returnEntities = jsonConcat(returnEntities, wire);
+returnEntities = jsonConcat(returnEntities, investment);
+returnEntities = jsonConcat(returnEntities, transfer);
+returnEntities = jsonConcat(returnEntities, check);
+returnEntities = jsonConcat(returnEntities, account);
+returnEntities = jsonConcat(returnEntities, movement);
+returnEntities = jsonConcat(returnEntities, interest);
+returnEntities = jsonConcat(returnEntities, loan);
+returnEntities = jsonConcat(returnEntities, box);
+returnEntities = jsonConcat(returnEntities, item);
+returnEntities = jsonConcat(returnEntities, purchase);
+returnEntities = jsonConcat(returnEntities, sale);
+returnEntities = jsonConcat(returnEntities, plan);
+returnEntities = jsonConcat(returnEntities, shipping);
+returnEntities = jsonConcat(returnEntities, code);
+returnEntities = jsonConcat(returnEntities, strain);
+returnEntities = jsonConcat(returnEntities, type);
+returnEntities = jsonConcat(returnEntities, store);
+returnEntities = jsonConcat(returnEntities, information);
+returnEntities = jsonConcat(returnEntities, tag);
+returnEntities = jsonConcat(returnEntities, section);
+returnEntities = jsonConcat(returnEntities, entity);
+
+var TYPES = {
+
+  SendeableMail: Symbol.for('SendeableMail'),
+
+  Routeable: Symbol.for('Routeable'),
+  Responseable: Symbol.for('Responseable'),
+  Appeable: Symbol.for('Appeable'),
+  Schemable: Symbol.for('Schemable'),
+  ConnectionableProvider: Symbol.for('ConnectionableProvider'),
+  GeteableModel: Symbol.for('GeteableModel'),
+  Authenticateable: Symbol.for('Authenticateable'),
+  Validateable: Symbol.for('Validateable'),
+  Router: Symbol.for('Router'),
+  Validable: Symbol.for('Validable'),
+  ResponseableDomain: Symbol.for('ResponseableDomain'),
+  Authenticable: Symbol.for('Authenticable'),
+  CreateableToken: Symbol.for('CreateableToken'),
+  Modelable: Symbol.for('Modelable'),
+
+  Controlleable: Symbol.for('Controlleable'),
+  Updateable: Symbol.for('Updateable'),
+  GeteableById: Symbol.for('GeteableById'),
+  Saveable: Symbol.for('Saveable'),
+  GeteableAll: Symbol.for('GeteableAll'),
+  Searcheable: Symbol.for('Searcheable'),
+  
+  GeteableCompanyStorage: Symbol.for('GeteableCompanyStorage'),
+  
+  Login: Symbol.for('Login'),
+  User: Symbol.for('User'),
+  Session: Symbol.for('Session'),
+  Company: Symbol.for('Company'),
+  Bank: Symbol.for('Bank'),
+  Item: Symbol.for('Item'),
+  Category: Symbol.for('Category'),
+  Transaction: Symbol.for('Transaction'),
+  Subcategory: Symbol.for('Subcategory'),
+  Message: Symbol.for('Message'),
+
+  UserInterface: Symbol.for('UserInterface'),
+  SessionInterface: Symbol.for('SessionInterface'),
+  CompanyInterface: Symbol.for('CompanyInterface'),
+  BankInterface: Symbol.for('BankInterface'),
+  ItemInterface: Symbol.for('ItemInterface'),
+  CategoryInterface: Symbol.for('CategoryInterface'),
+  TransactionInterface: Symbol.for('TransactionInterface'),
+  SubcategoryInterface: Symbol.for('SubcategoryInterface'),
+  MessageInterface: Symbol.for('MessageInterface'),
+
+  SessionBuilderable: Symbol.for('SessionBuilderable'),
+
+  UserServiceableDomain: Symbol.for('UserServiceableDomain'),
+  SessionServiceableDomain: Symbol.for('SessionServiceableDomain'),
+  CompanyServiceableDomain: Symbol.for('CompanyServiceableDomain'),
+  BankServiceableDomain: Symbol.for('BankServiceableDomain'),
+  ItemServiceableDomain: Symbol.for('ItemServiceableDomain'),
+  CategoryServiceableDomain: Symbol.for('CategoryServiceableDomain'),
+  TransactionServiceableDomain: Symbol.for('TransactionServiceableDomain'),
+  SubcategoryServiceableDomain: Symbol.for('SubcategoryServiceableDomain'),
+  MessageServiceableDomain: Symbol.for('MessageServiceableDomain'),
+
+  Post: Symbol.for('Post'),
+  PostInterface: Symbol.for('PostInterface'),
+  PostServiceableDomain: Symbol.for('PostServiceableDomain'),
+
+  Proposal: Symbol.for('Proposal'),
+  ProposalInterface: Symbol.for('ProposalInterface'),
+  ProposalServiceableDomain: Symbol.for('ProposalServiceableDomain'),
+
+  ProposalState: Symbol.for('ProposalState'),
+  ProposalStateInterface: Symbol.for('ProposalStateInterface'),
+  ProposalStateServiceableDomain: Symbol.for('ProposalStateServiceableDomain'),
+
+  Permission: Symbol.for('Permission'),
+  PermissionInterface: Symbol.for('PermissionInterface'),
+  PermissionServiceableDomain: Symbol.for('PermissionServiceableDomain'),
+
+  Rol: Symbol.for('Rol'),
+  RolInterface: Symbol.for('RolInterface'),
+  RolServiceableDomain: Symbol.for('RolServiceableDomain'),
+
+  Mail: Symbol.for('Mail'),
+  MailInterface: Symbol.for('MailInterface'),
+  MailServiceableDomain: Symbol.for('MailServiceableDomain'),
+
+  Payment: Symbol.for('Payment'),
+  PaymentInterface: Symbol.for('PaymentInterface'),
+  PaymentServiceableDomain: Symbol.for('PaymentServiceableDomain'),
+
+  Subscription: Symbol.for('Subscription'),
+  SubscriptionInterface: Symbol.for('SubscriptionInterface'),
+  SubscriptionServiceableDomain: Symbol.for('SubscriptionServiceableDomain'),
+
+	Hernan: Symbol.for('Hernan'),
+	HernanInterface: Symbol.for('HernanInterface'),
+	HernanServiceableDomain: Symbol.for('HernanServiceableDomain'),
+
+	Course: Symbol.for('Course'),
+  CourseInterface: Symbol.for('CourseInterface'),
+  CourseServiceableDomain: Symbol.for('CourseServiceableDomain'),
+  
+  Student: Symbol.for('Student'),
+  
+  StudentInterface: Symbol.for('StudentInterface'),
+  StudentServiceableDomain: Symbol.for('StudentServiceableDomain'),
+
+  LinkInterface: Symbol.for('LinkInterface'),
+  LinkServiceableDomain: Symbol.for('LinkServiceableDomain'),
+  Link: Symbol.for('Link'),
+
+  FileInterface: Symbol.for('FileInterface'),
+  FileServiceableDomain: Symbol.for('FileServiceableDomain'),
+  File: Symbol.for('File'),
+
+  ExamInterface: Symbol.for('ExamInterface'),
+  ExamServiceableDomain: Symbol.for('ExamServiceableDomain'),
+  Exam: Symbol.for('Exam'),
+
+  QuestionInterface: Symbol.for('QuestionInterface'),
+  QuestionServiceableDomain: Symbol.for('QuestionServiceableDomain'),
+  Question: Symbol.for('Question'),
+
+  QuestionTypeInterface: Symbol.for('QuestionTypeInterface'),
+  QuestionTypeServiceableDomain: Symbol.for('QuestionTypeServiceableDomain'),
+  QuestionType: Symbol.for('QuestionType'),
+
+  QuizInterface: Symbol.for('QuizInterface'),
+  QuizServiceableDomain: Symbol.for('QuizServiceableDomain'),
+  Quiz: Symbol.for('Quiz'),
+
+  QuestionQuizInterface: Symbol.for('QuestionQuizInterface'),
+  QuestionQuizServiceableDomain: Symbol.for('QuestionQuizServiceableDomain'),
+  QuestionQuiz: Symbol.for('QuestionQuiz'),
+
+  MagnitudeInterface: Symbol.for('MagnitudeInterface'),
+  MagnitudeServiceableDomain: Symbol.for('MagnitudeServiceableDomain'),
+  Magnitude: Symbol.for('Magnitude'),
+
+};
+
+returnEntities = jsonConcat(returnEntities,TYPES);
+
+export default returnEntities;
