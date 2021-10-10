@@ -1,6 +1,6 @@
-import * as bodyParser from 'body-parser'
-import * as cookieParser from 'cookie-parser'
-import * as cors from 'cors'
+import bodyParser from 'body-parser'
+import cookieParser from 'cookie-parser'
+import cors from 'cors'
 import { Express } from 'express'
 import  e from 'express'
 import { injectable, multiInject } from 'inversify';

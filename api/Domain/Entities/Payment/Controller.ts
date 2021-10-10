@@ -3,7 +3,7 @@ import { injectable, inject } from 'inversify';
 import TYPES from './../../../TYPES'
 import axios from 'axios'
 
-import * as moment from 'moment';
+import moment from 'moment';
 import 'moment/locale/es';
 
 import Responseable from '../Util/Ports/Responseable'

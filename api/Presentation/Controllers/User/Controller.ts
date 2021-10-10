@@ -1,11 +1,11 @@
 import { Router, Response, NextFunction } from 'express'
 import { Model, Document } from 'mongoose'
 import { injectable, inject, named } from 'inversify';
-import * as XLSX from 'xlsx'
+import XLSX from 'xlsx'
 
 import TYPES from './../../../TYPES';
 import container from './../../../inversify.config';
-import * as multer from 'multer'
+import multer from 'multer'
 
 import Routeable from '../Ports/Routeable'
 import Patheable from '../Ports/Patheable'

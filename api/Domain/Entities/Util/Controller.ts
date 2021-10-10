@@ -1,6 +1,6 @@
 import { Model, Document, Types } from 'mongoose'
 import { injectable } from 'inversify';
-import * as moment from 'moment'
+import moment from 'moment'
 
 import ConnectionableProvider from './../../../Infrastructure/Persistence/Ports/ConnectionableProvider';
 import ConnectionProvider from './../../../Infrastructure/Persistence/ConnectionProvider';

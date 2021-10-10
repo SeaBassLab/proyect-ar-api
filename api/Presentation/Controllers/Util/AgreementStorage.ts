@@ -7,7 +7,7 @@ import GeteableAgreementStorage from '../Ports/GeteableAgreementStorage';
 import GeteablePropertyStorage from '../Ports/GeteablePropertyStorage';
 import GeteableClaimStorage from '../Ports/GeteableClaimStorage';
 import RequestWithUser from '../../Ports/RequestWithUser';
-import * as moment from 'moment'
+import moment from 'moment'
 
 const path = require('path');
 
