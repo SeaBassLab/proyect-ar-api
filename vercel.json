@@ -1,7 +1,5 @@
 {
-  "version": 2,
-  "name": "proyect-ar",
-  "scripts": [
-    { "src": "package.json", "use": "start" }
-  ]
+  "rewrites": [{
+    "source": "/src/(.*)", "destination": "/src/server.ts"
+  }]
 }
