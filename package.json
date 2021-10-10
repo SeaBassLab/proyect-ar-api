@@ -62,5 +62,8 @@
 	"devDependencies": {
 		"@vercel/next": "^2.7.9",
 		"@vercel/node": "^1.12.1"
-	}
+	},
+	"engines": {
+		"node": ">=0.10.3 <15"
+	  }
 }
