@@ -1,18 +1,8 @@
 {
-    "name": "proyect-ar",
-    "version": 2,
-    "builds": [
-      {
-        "src": "./src/server.ts",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [{
-      "headers": {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-          "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept"
-      },
-      "src": "/.*", "dest": "server.ts" }
-    ]
-  }
+  "version": 2,
+  "name": "proyect-ar",
+  "builds": [
+    { "src": "package.json", "use": "@vercel/next" },
+    { "src": "src/**/*.ts", "use": "@vercel/node" }
+  ]
+}
