@@ -1,5 +1,10 @@
 {
+  "functions": {
+  "server.ts": {
+    "runtime": "@now/node@1.6.1"
+  }
+  },
   "rewrites": [{
-    "source": "/api/(.*)", "destination": "/api/index.js"
+  "source": "/src/(.*)", "destination": "server.ts"
   }]
-}
+  }
