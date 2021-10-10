@@ -2,6 +2,6 @@
   "version": 2,
   "name": "proyect-ar",
   "builds": [
-    { "src": "package.json", "use": "start" }
+    { "src": "package.json", "use": "nodemon" }
   ]
 }
