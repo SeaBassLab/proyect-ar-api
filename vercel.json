@@ -2,6 +2,6 @@
   "version": 2,
   "name": "proyect-ar",
   "builds": [
-    { "src": "src/**/*.ts", "use": "@vercel/node" }
+    { "src": "src/server.ts", "use": "@vercel/node" }
   ]
 }
