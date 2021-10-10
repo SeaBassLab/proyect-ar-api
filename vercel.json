@@ -1,3 +1,19 @@
 {
-  "version": 2
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes":[
+    {
+      "src": "./(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "CLUSTER": "@proyectar-cluster",
+    "DB_NAME": "@proyectar-db-name"
+  }
 }
