@@ -2,7 +2,7 @@
 	"name": "express-typescript",
 	"version": "1.0.0",
 	"description": "",
-	"main": "src/server.ts",
+	"main": "api/server.ts",
 	"dependencies": {
 		"@afipsdk/afip.js": "^0.7.1",
 		"@types/bcrypt": "^3.0.0",
@@ -52,9 +52,8 @@
 		"xlsx": "^0.17.0"
 	},
 	"scripts": {
-		"start": "nodemon ./src/server.ts",
-		"dev": "ts-node ./src/server.ts",
-		"build": "next build",
+		"start": "nodemon ./api/server.ts",
+		"dev": "ts-node ./api/server.ts",
 		"lint": "tslint -p tsconfig.json -c tslint.json",
 		"test": "jest"
 	},

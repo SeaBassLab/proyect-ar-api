@@ -12,7 +12,7 @@ import Routeable from './Presentation/Controllers/Ports/Routeable'
 import Initiable from './Presentation/Ports/Initiable'
 
 import ErrorMiddleware from './Presentation/Middlewares/Error'
-import Appeable from 'Appeable'
+import Appeable from './Appeable'
 
 @injectable()
 export default class App implements Appeable {
