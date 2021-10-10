@@ -2,7 +2,7 @@ import * as bodyParser from 'body-parser'
 import * as cookieParser from 'cookie-parser'
 import * as cors from 'cors'
 import { Express } from 'express'
-import * as express from 'express'
+import  e from 'express'
 import { injectable, multiInject } from 'inversify';
 import "reflect-metadata";
 
@@ -17,7 +17,7 @@ import Appeable from './Appeable'
 @injectable()
 export default class App implements Appeable {
 
-	public app: Express = express();
+	public app: Express = e();
 	@multiInject(TYPES.Routeable) public controllers: Routeable[] = []
 
 	constructor() {
