@@ -58,5 +58,8 @@
 		"test": "jest"
 	},
 	"author": "Marcin Wanago",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"@vercel/node": "^1.12.1"
+	}
 }
