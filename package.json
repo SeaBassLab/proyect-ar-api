@@ -52,7 +52,7 @@
 		"xlsx": "^0.17.0"
 	},
 	"scripts": {
-		"start": "nodemon ./api/server.ts",
+		"start": "node ./api/server.ts",
 		"dev": "ts-node ./api/server.ts",
 		"lint": "tslint -p tsconfig.json -c tslint.json",
 		"test": "jest"
