@@ -1,11 +1,23 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _mongoose = require("mongoose");
 
@@ -19,52 +31,36 @@ var _Responser = _interopRequireDefault(require("./Responser"));
 
 var _dec, _class;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__*/function () {
   function Controller() {
-    _classCallCheck(this, Controller);
-
-    _defineProperty(this, "BSON", require('bson'));
-
+    (0, _classCallCheck2["default"])(this, Controller);
+    (0, _defineProperty2["default"])(this, "BSON", require('bson'));
     this.EJSON = this.BSON.EJSON;
     this.responserService = new _Responser["default"]();
     this.connectionProvider = new _ConnectionProvider["default"]();
   }
 
-  _createClass(Controller, [{
+  (0, _createClass2["default"])(Controller, [{
     key: "search",
     value: function () {
-      var _search2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(model, _search) {
+      var _search2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(model, _search) {
         var _this = this;
 
-        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        return _regenerator["default"].wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
                 return _context2.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(resolve, reject) {
-                    return regeneratorRuntime.wrap(function _callee$(_context) {
+                  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(resolve, reject) {
+                    return _regenerator["default"].wrap(function _callee$(_context) {
                       while (1) {
                         switch (_context.prev = _context.next) {
                           case 0:
@@ -143,7 +139,7 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
   }, {
     key: "getAll",
     value: function () {
-      var _getAll = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(model) {
+      var _getAll = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(model) {
         var _this2 = this;
 
         var project,
@@ -153,7 +149,7 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
             limit,
             skip,
             _args5 = arguments;
-        return regeneratorRuntime.wrap(function _callee5$(_context5) {
+        return _regenerator["default"].wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
@@ -164,10 +160,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
                 limit = _args5.length > 5 && _args5[5] !== undefined ? _args5[5] : 0;
                 skip = _args5.length > 6 && _args5[6] !== undefined ? _args5[6] : 0;
                 return _context5.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(resolve, reject) {
+                  var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(resolve, reject) {
                     var queryAggregate, projectGroup, _i, _Object$keys, prop;
 
-                    return regeneratorRuntime.wrap(function _callee4$(_context4) {
+                    return _regenerator["default"].wrap(function _callee4$(_context4) {
                       while (1) {
                         switch (_context4.prev = _context4.next) {
                           case 0:
@@ -233,8 +229,8 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
 
                             _context4.next = 10;
                             return model.aggregate(queryAggregate).then( /*#__PURE__*/function () {
-                              var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(result) {
-                                return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                              var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(result) {
+                                return _regenerator["default"].wrap(function _callee3$(_context3) {
                                   while (1) {
                                     switch (_context3.prev = _context3.next) {
                                       case 0:
@@ -703,16 +699,16 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
   }, {
     key: "getById",
     value: function () {
-      var _getById = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7(id, model, userModel) {
+      var _getById = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee7(id, model, userModel) {
         var _this3 = this;
 
-        return regeneratorRuntime.wrap(function _callee7$(_context7) {
+        return _regenerator["default"].wrap(function _callee7$(_context7) {
           while (1) {
             switch (_context7.prev = _context7.next) {
               case 0:
                 return _context7.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(resolve, reject) {
-                    return regeneratorRuntime.wrap(function _callee6$(_context6) {
+                  var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee6(resolve, reject) {
+                    return _regenerator["default"].wrap(function _callee6$(_context6) {
                       while (1) {
                         switch (_context6.prev = _context6.next) {
                           case 0:
@@ -793,17 +789,17 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
   }, {
     key: "save",
     value: function () {
-      var _save = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee10(objData, model, userModel, idUser) {
+      var _save = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee10(objData, model, userModel, idUser) {
         var _this4 = this;
 
-        return regeneratorRuntime.wrap(function _callee10$(_context10) {
+        return _regenerator["default"].wrap(function _callee10$(_context10) {
           while (1) {
             switch (_context10.prev = _context10.next) {
               case 0:
                 return _context10.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee9(resolve, reject) {
+                  var _ref5 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee9(resolve, reject) {
                     var createdObj;
-                    return regeneratorRuntime.wrap(function _callee9$(_context9) {
+                    return _regenerator["default"].wrap(function _callee9$(_context9) {
                       while (1) {
                         switch (_context9.prev = _context9.next) {
                           case 0:
@@ -843,8 +839,8 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
 
                             _context9.next = 8;
                             return createdObj.save().then( /*#__PURE__*/function () {
-                              var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8(res) {
-                                return regeneratorRuntime.wrap(function _callee8$(_context8) {
+                              var _ref6 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee8(res) {
+                                return _regenerator["default"].wrap(function _callee8$(_context8) {
                                   while (1) {
                                     switch (_context8.prev = _context8.next) {
                                       case 0:
@@ -949,16 +945,16 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
   }, {
     key: "update",
     value: function () {
-      var _update = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee13(id, objData, model, userModel, idUser) {
+      var _update = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee13(id, objData, model, userModel, idUser) {
         var _this5 = this;
 
-        return regeneratorRuntime.wrap(function _callee13$(_context13) {
+        return _regenerator["default"].wrap(function _callee13$(_context13) {
           while (1) {
             switch (_context13.prev = _context13.next) {
               case 0:
                 return _context13.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref7 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee12(resolve, reject) {
-                    return regeneratorRuntime.wrap(function _callee12$(_context12) {
+                  var _ref7 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee12(resolve, reject) {
+                    return _regenerator["default"].wrap(function _callee12$(_context12) {
                       while (1) {
                         switch (_context12.prev = _context12.next) {
                           case 0:
@@ -996,8 +992,8 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
                             return model.findByIdAndUpdate(id, objData, {
                               "new": true
                             }).then( /*#__PURE__*/function () {
-                              var _ref8 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee11(doc) {
-                                return regeneratorRuntime.wrap(function _callee11$(_context11) {
+                              var _ref8 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee11(doc) {
+                                return _regenerator["default"].wrap(function _callee11$(_context11) {
                                   while (1) {
                                     switch (_context11.prev = _context11.next) {
                                       case 0:
@@ -1116,7 +1112,6 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__
       return Math.round(value * power) / power;
     }
   }]);
-
   return Controller;
 }()) || _class);
 exports["default"] = Controller;

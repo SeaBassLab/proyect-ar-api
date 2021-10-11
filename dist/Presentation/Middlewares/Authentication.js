@@ -1,11 +1,23 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var jwt = _interopRequireWildcard(require("jsonwebtoken"));
 
@@ -29,49 +41,28 @@ var _Controller = _interopRequireDefault(require("../../Domain/Entities/Util/Con
 
 var _dec, _class;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var Authentication = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PURE__*/function () {
   function Authentication() {
-    _classCallCheck(this, Authentication);
-
-    _defineProperty(this, "responserService", _inversify2["default"].get(_TYPES["default"].Responseable));
-
-    _defineProperty(this, "userSchema", _inversify2["default"].getNamed(_TYPES["default"].Schemable, _TYPES["default"].User));
-
-    _defineProperty(this, "sessionSchema", _inversify2["default"].getNamed(_TYPES["default"].Schemable, _TYPES["default"].User));
-
-    _defineProperty(this, "updateableService", _inversify2["default"].get(_TYPES["default"].Updateable));
-
-    _defineProperty(this, "geteableAllService", _inversify2["default"].get(_TYPES["default"].GeteableAll));
-
-    _defineProperty(this, "connectionProvider", _inversify2["default"].get(_TYPES["default"].ConnectionableProvider));
-
-    _defineProperty(this, "geteableByIdService", _inversify2["default"].get(_TYPES["default"].GeteableById));
+    (0, _classCallCheck2["default"])(this, Authentication);
+    (0, _defineProperty2["default"])(this, "responserService", _inversify2["default"].get(_TYPES["default"].Responseable));
+    (0, _defineProperty2["default"])(this, "userSchema", _inversify2["default"].getNamed(_TYPES["default"].Schemable, _TYPES["default"].User));
+    (0, _defineProperty2["default"])(this, "sessionSchema", _inversify2["default"].getNamed(_TYPES["default"].Schemable, _TYPES["default"].User));
+    (0, _defineProperty2["default"])(this, "updateableService", _inversify2["default"].get(_TYPES["default"].Updateable));
+    (0, _defineProperty2["default"])(this, "geteableAllService", _inversify2["default"].get(_TYPES["default"].GeteableAll));
+    (0, _defineProperty2["default"])(this, "connectionProvider", _inversify2["default"].get(_TYPES["default"].ConnectionableProvider));
+    (0, _defineProperty2["default"])(this, "geteableByIdService", _inversify2["default"].get(_TYPES["default"].GeteableById));
   }
 
-  _createClass(Authentication, [{
+  (0, _createClass2["default"])(Authentication, [{
     key: "authenticate",
     value: function () {
-      var _authenticate = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(request, response, next) {
+      var _authenticate = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(request, response, next) {
         var responserService, nextBool, token, secret, verificationResponse, id, database, userSchema, sessionSchema, userModel, sessionModel, controllerService;
-        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+        return _regenerator["default"].wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -121,9 +112,9 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PU
                 controllerService = new _Controller["default"]();
                 _context3.next = 20;
                 return controllerService.getById(id, userModel, userModel).then( /*#__PURE__*/function () {
-                  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(res) {
+                  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(res) {
                     var user, match;
-                    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                    return _regenerator["default"].wrap(function _callee2$(_context2) {
                       while (1) {
                         switch (_context2.prev = _context2.next) {
                           case 0:
@@ -149,8 +140,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PU
                             };
                             _context2.next = 9;
                             return controllerService.getAll(sessionModel, {}, match, {}, {}, 1, 0).then( /*#__PURE__*/function () {
-                              var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(res) {
-                                return regeneratorRuntime.wrap(function _callee$(_context) {
+                              var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(res) {
+                                return _regenerator["default"].wrap(function _callee$(_context) {
                                   while (1) {
                                     switch (_context.prev = _context.next) {
                                       case 0:
@@ -259,7 +250,6 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec(_class = /*#__PU
       return authenticate;
     }()
   }]);
-
   return Authentication;
 }()) || _class);
 exports["default"] = Authentication;

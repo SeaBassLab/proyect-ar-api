@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -70,8 +72,6 @@ var _types31 = _interopRequireDefault(require("./Presentation/Controllers/Tag/ty
 var _types32 = _interopRequireDefault(require("./Presentation/Controllers/Section/types"));
 
 var _types33 = _interopRequireDefault(require("./Presentation/Controllers/Entity/types"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var returnEntities = {};
 

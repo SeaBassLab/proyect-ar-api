@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -18,8 +20,6 @@ var _Controller = _interopRequireDefault(require("./../../../Domain/Entities/Pur
 var _Dto = _interopRequireDefault(require("./../../../Domain/Entities/Purchase/Dto"));
 
 var _Controller2 = _interopRequireDefault(require("./../../../Presentation/Controllers/Purchase/Controller"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var container = new _inversify.Container();
 container.bind(_TYPES["default"].Schemable).toConstantValue(new _Model["default"]()).whenTargetNamed(_TYPES["default"].Purchase);

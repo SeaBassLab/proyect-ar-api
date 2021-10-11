@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -306,8 +308,6 @@ var _Controller51 = _interopRequireDefault(require("./Domain/Entities/QuestionQu
 var _Dto26 = _interopRequireDefault(require("./Domain/Entities/QuestionQuiz/Dto"));
 
 var _Controller52 = _interopRequireDefault(require("./Presentation/Controllers/QuestionQuiz/Controller"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 // Containers
 // Implementations

@@ -1,9 +1,21 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var _mongoose = require("mongoose");
 
@@ -17,29 +29,17 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var ConnectionProvider = (_dec = (0, _inversify.injectable)(), _dec(_class = (_temp = _class2 = /*#__PURE__*/function () {
   function ConnectionProvider() {
-    _classCallCheck(this, ConnectionProvider);
+    (0, _classCallCheck2["default"])(this, ConnectionProvider);
   }
 
-  _createClass(ConnectionProvider, [{
+  (0, _createClass2["default"])(ConnectionProvider, [{
     key: "connect",
     value: function () {
-      var _connect = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(database) {
+      var _connect = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(database) {
         var connection, uri;
-        return regeneratorRuntime.wrap(function _callee$(_context) {
+        return _regenerator["default"].wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
@@ -127,9 +127,9 @@ var ConnectionProvider = (_dec = (0, _inversify.injectable)(), _dec(_class = (_t
   }, {
     key: "getModel",
     value: function () {
-      var _getModel = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(database, name, schema) {
+      var _getModel = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(database, name, schema) {
         var model, connection;
-        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        return _regenerator["default"].wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
@@ -167,7 +167,6 @@ var ConnectionProvider = (_dec = (0, _inversify.injectable)(), _dec(_class = (_t
       return getModel;
     }()
   }]);
-
   return ConnectionProvider;
-}(), _defineProperty(_class2, "connections", []), _temp)) || _class);
+}(), (0, _defineProperty2["default"])(_class2, "connections", []), _temp)) || _class);
 exports["default"] = ConnectionProvider;

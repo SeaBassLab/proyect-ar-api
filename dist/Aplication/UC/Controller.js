@@ -1,11 +1,21 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
 var moment = _interopRequireWildcard(require("moment"));
 
@@ -13,34 +23,24 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
 var Controller = /*#__PURE__*/function () {
   function Controller() {
-    _classCallCheck(this, Controller);
+    (0, _classCallCheck2["default"])(this, Controller);
   }
 
-  _createClass(Controller, [{
+  (0, _createClass2["default"])(Controller, [{
     key: "makeEffectiveAgreement",
     value: function () {
-      var _makeEffectiveAgreement = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee16(transactionTypeId, agreementId, agreementStatusId, originId, responserService, agreementService, agreementUpdateService, agreementStatusService, personService, propertyService, serviceService, transactionService, movementOfServiceSaveService, transactionTypeService, originService, serviceTypeService, personTypeService, userService, vatConditionService, movementOfServiceService, increaseBalance, agreementModel, agreementStatusModel, personModel, propertyModel, serviceModel, transactionModel, movementOfServiceModel, transactionTypeModel, originModel, serviceTypeModel, personTypeModel, userModel, vatConditionModel, controller, idUser) {
-        return regeneratorRuntime.wrap(function _callee16$(_context16) {
+      var _makeEffectiveAgreement = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee16(transactionTypeId, agreementId, agreementStatusId, originId, responserService, agreementService, agreementUpdateService, agreementStatusService, personService, propertyService, serviceService, transactionService, movementOfServiceSaveService, transactionTypeService, originService, serviceTypeService, personTypeService, userService, vatConditionService, movementOfServiceService, increaseBalance, agreementModel, agreementStatusModel, personModel, propertyModel, serviceModel, transactionModel, movementOfServiceModel, transactionTypeModel, originModel, serviceTypeModel, personTypeModel, userModel, vatConditionModel, controller, idUser) {
+        return _regenerator["default"].wrap(function _callee16$(_context16) {
           while (1) {
             switch (_context16.prev = _context16.next) {
               case 0:
                 return _context16.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee15(resolve, reject) {
+                  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee15(resolve, reject) {
                     var agreement, agreementStatus, agreementStatusReceived, transactionType, lessee, contractType, properties, startDate, endDate, duration, numberOftransaction, services, serviceLocation, transaction, transactionList, movementOfservice, movementsOfService, origin, number, letter, agreementType, serivicesIds, personType, adjustmentPercentage, adjustmentFrecuency, expirationDay, invoiceNumber, vatCondition, companyId, company, project, match, _match, _match2;
 
-                    return regeneratorRuntime.wrap(function _callee15$(_context15) {
+                    return _regenerator["default"].wrap(function _callee15$(_context15) {
                       while (1) {
                         switch (_context15.prev = _context15.next) {
                           case 0:
@@ -149,10 +149,10 @@ var Controller = /*#__PURE__*/function () {
                             };
                             _context15.next = 21;
                             return agreementService.getAll(controller, agreementModel, {}, _match2, {}, {}, 1, 0).then( /*#__PURE__*/function () {
-                              var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee14(res) {
+                              var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee14(res) {
                                 var _match3, updateAgreement;
 
-                                return regeneratorRuntime.wrap(function _callee14$(_context14) {
+                                return _regenerator["default"].wrap(function _callee14$(_context14) {
                                   while (1) {
                                     switch (_context14.prev = _context14.next) {
                                       case 0:
@@ -284,10 +284,10 @@ var Controller = /*#__PURE__*/function () {
                                         };
                                         _context14.next = 25;
                                         return agreementUpdateService.update(agreement._id, updateAgreement, agreementModel, controller, idUser, agreementStatusModel).then( /*#__PURE__*/function () {
-                                          var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee13(res) {
+                                          var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee13(res) {
                                             var _match4, _match5, servicesHidrate, agreementServices, totalTransaction, dates, endDates, year, month, i, myDate, starDateTransaction, lastDayOfMonth, endDateTransaction, _project, sort, priceAux, period, adjust, movementList, movementOfServiceListList, asd;
 
-                                            return regeneratorRuntime.wrap(function _callee13$(_context13) {
+                                            return _regenerator["default"].wrap(function _callee13$(_context13) {
                                               while (1) {
                                                 switch (_context13.prev = _context13.next) {
                                                   case 0:
@@ -339,10 +339,10 @@ var Controller = /*#__PURE__*/function () {
                                                     };
                                                     _context13.next = 8;
                                                     return personService.getAll(controller, personModel, {}, _match5, {}, {}, 1, 0).then( /*#__PURE__*/function () {
-                                                      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(res) {
+                                                      var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(res) {
                                                         var _match6;
 
-                                                        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                                                        return _regenerator["default"].wrap(function _callee2$(_context2) {
                                                           while (1) {
                                                             switch (_context2.prev = _context2.next) {
                                                               case 0:
@@ -359,8 +359,8 @@ var Controller = /*#__PURE__*/function () {
                                                                 };
                                                                 _context2.next = 5;
                                                                 return vatConditionService.getAll(controller, vatConditionModel, {}, _match6, {}, {}, 1, 0).then( /*#__PURE__*/function () {
-                                                                  var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(res) {
-                                                                    return regeneratorRuntime.wrap(function _callee$(_context) {
+                                                                  var _ref5 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(res) {
+                                                                    return _regenerator["default"].wrap(function _callee$(_context) {
                                                                       while (1) {
                                                                         switch (_context.prev = _context.next) {
                                                                           case 0:
@@ -455,9 +455,9 @@ var Controller = /*#__PURE__*/function () {
 
                                                     _context13.next = 15;
                                                     return Promise.all(agreement.property.map( /*#__PURE__*/function () {
-                                                      var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(property) {
+                                                      var _ref6 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(property) {
                                                         var match, propertyAux;
-                                                        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                                                        return _regenerator["default"].wrap(function _callee3$(_context3) {
                                                           while (1) {
                                                             switch (_context3.prev = _context3.next) {
                                                               case 0:
@@ -552,9 +552,9 @@ var Controller = /*#__PURE__*/function () {
                                                   case 30:
                                                     _context13.next = 32;
                                                     return Promise.all(serivicesIds.map( /*#__PURE__*/function () {
-                                                      var _ref7 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(id) {
+                                                      var _ref7 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(id) {
                                                         var project, match, serviceHidrate;
-                                                        return regeneratorRuntime.wrap(function _callee4$(_context4) {
+                                                        return _regenerator["default"].wrap(function _callee4$(_context4) {
                                                           while (1) {
                                                             switch (_context4.prev = _context4.next) {
                                                               case 0:
@@ -623,9 +623,9 @@ var Controller = /*#__PURE__*/function () {
                                                     servicesHidrate = _context13.sent;
                                                     _context13.next = 35;
                                                     return Promise.all(servicesHidrate.map( /*#__PURE__*/function () {
-                                                      var _ref8 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(serviceHidrate) {
+                                                      var _ref8 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(serviceHidrate) {
                                                         var serviceReturn;
-                                                        return regeneratorRuntime.wrap(function _callee5$(_context5) {
+                                                        return _regenerator["default"].wrap(function _callee5$(_context5) {
                                                           while (1) {
                                                             switch (_context5.prev = _context5.next) {
                                                               case 0:
@@ -793,8 +793,8 @@ var Controller = /*#__PURE__*/function () {
                                                     });
                                                     _context13.next = 60;
                                                     return Promise.all(transactionList.map( /*#__PURE__*/function () {
-                                                      var _ref9 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(transaction) {
-                                                        return regeneratorRuntime.wrap(function _callee6$(_context6) {
+                                                      var _ref9 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee6(transaction) {
+                                                        return _regenerator["default"].wrap(function _callee6$(_context6) {
                                                           while (1) {
                                                             switch (_context6.prev = _context6.next) {
                                                               case 0:
@@ -839,17 +839,17 @@ var Controller = /*#__PURE__*/function () {
                                                   case 60:
                                                     _context13.next = 62;
                                                     return Promise.all(transactionList.map( /*#__PURE__*/function () {
-                                                      var _ref10 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8(transaction) {
+                                                      var _ref10 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee8(transaction) {
                                                         var movementOfserviceListb;
-                                                        return regeneratorRuntime.wrap(function _callee8$(_context8) {
+                                                        return _regenerator["default"].wrap(function _callee8$(_context8) {
                                                           while (1) {
                                                             switch (_context8.prev = _context8.next) {
                                                               case 0:
                                                                 _context8.next = 2;
                                                                 return Promise.all(agreement.services.map( /*#__PURE__*/function () {
-                                                                  var _ref11 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7(service) {
+                                                                  var _ref11 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee7(service) {
                                                                     var movementOfServiceReturn;
-                                                                    return regeneratorRuntime.wrap(function _callee7$(_context7) {
+                                                                    return _regenerator["default"].wrap(function _callee7$(_context7) {
                                                                       while (1) {
                                                                         switch (_context7.prev = _context7.next) {
                                                                           case 0:
@@ -942,17 +942,17 @@ var Controller = /*#__PURE__*/function () {
                                                     movementList = _context13.sent;
                                                     _context13.next = 65;
                                                     return Promise.all(movementList.map( /*#__PURE__*/function () {
-                                                      var _ref12 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee10(movementListAux) {
+                                                      var _ref12 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee10(movementListAux) {
                                                         var movementOfServiceListGet;
-                                                        return regeneratorRuntime.wrap(function _callee10$(_context10) {
+                                                        return _regenerator["default"].wrap(function _callee10$(_context10) {
                                                           while (1) {
                                                             switch (_context10.prev = _context10.next) {
                                                               case 0:
                                                                 _context10.next = 2;
                                                                 return Promise.all(movementListAux.map( /*#__PURE__*/function () {
-                                                                  var _ref13 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee9(movementOfServiceId) {
+                                                                  var _ref13 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee9(movementOfServiceId) {
                                                                     var movementOfService, match;
-                                                                    return regeneratorRuntime.wrap(function _callee9$(_context9) {
+                                                                    return _regenerator["default"].wrap(function _callee9$(_context9) {
                                                                       while (1) {
                                                                         switch (_context9.prev = _context9.next) {
                                                                           case 0:
@@ -1038,17 +1038,17 @@ var Controller = /*#__PURE__*/function () {
                                                     });
                                                     _context13.next = 71;
                                                     return Promise.all(movementOfServiceListList.map( /*#__PURE__*/function () {
-                                                      var _ref14 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee12(movementOfServiceList) {
+                                                      var _ref14 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee12(movementOfServiceList) {
                                                         var asd;
-                                                        return regeneratorRuntime.wrap(function _callee12$(_context12) {
+                                                        return _regenerator["default"].wrap(function _callee12$(_context12) {
                                                           while (1) {
                                                             switch (_context12.prev = _context12.next) {
                                                               case 0:
                                                                 _context12.next = 2;
                                                                 return Promise.all(movementOfServiceList.map( /*#__PURE__*/function () {
-                                                                  var _ref15 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee11(movementOfService) {
+                                                                  var _ref15 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee11(movementOfService) {
                                                                     var asd, id;
-                                                                    return regeneratorRuntime.wrap(function _callee11$(_context11) {
+                                                                    return _regenerator["default"].wrap(function _callee11$(_context11) {
                                                                       while (1) {
                                                                         switch (_context11.prev = _context11.next) {
                                                                           case 0:
@@ -1356,16 +1356,16 @@ var Controller = /*#__PURE__*/function () {
   }, {
     key: "debitTransaction",
     value: function () {
-      var _debitTransaction = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee22(movementOfCashs, transactionCreditIds, transactionTypeDebitId, responserService, controller, idUser, movementOfCashSaveService, transactionTransactionSaveService, transactionService, cashBoxTypeService, cashBoxService, userService, transactionTypeService, personService, movementOfCashModel, transactionTransactionModel, transactionModel, cashBoxTypeModel, cashBoxModel, userModel, transactionTypeModel, personModel) {
-        return regeneratorRuntime.wrap(function _callee22$(_context22) {
+      var _debitTransaction = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee22(movementOfCashs, transactionCreditIds, transactionTypeDebitId, responserService, controller, idUser, movementOfCashSaveService, transactionTransactionSaveService, transactionService, cashBoxTypeService, cashBoxService, userService, transactionTypeService, personService, movementOfCashModel, transactionTransactionModel, transactionModel, cashBoxTypeModel, cashBoxModel, userModel, transactionTypeModel, personModel) {
+        return _regenerator["default"].wrap(function _callee22$(_context22) {
           while (1) {
             switch (_context22.prev = _context22.next) {
               case 0:
                 return _context22.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref16 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee21(resolve, reject) {
+                  var _ref16 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee21(resolve, reject) {
                     var movementOfCashsReceived, transactionCredits, transactionTypeDebit, transactionDebit, personTransactionDebit, totalPriceTransactionDebit, totalPriceTransactionCredit, transactionDebitId, transactionTransactionIds, match, transactionCreditAux, _match7;
 
-                    return regeneratorRuntime.wrap(function _callee21$(_context21) {
+                    return _regenerator["default"].wrap(function _callee21$(_context21) {
                       while (1) {
                         switch (_context21.prev = _context21.next) {
                           case 0:
@@ -1380,9 +1380,9 @@ var Controller = /*#__PURE__*/function () {
 
                             _context21.next = 6;
                             return Promise.all(transactionCreditIds.map( /*#__PURE__*/function () {
-                              var _ref17 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee17(transactionCreditId) {
+                              var _ref17 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee17(transactionCreditId) {
                                 var match, transactionReturn;
-                                return regeneratorRuntime.wrap(function _callee17$(_context17) {
+                                return _regenerator["default"].wrap(function _callee17$(_context17) {
                                   while (1) {
                                     switch (_context17.prev = _context17.next) {
                                       case 0:
@@ -1666,9 +1666,9 @@ var Controller = /*#__PURE__*/function () {
                           case 30:
                             _context21.next = 32;
                             return Promise.all(transactionCredits.map( /*#__PURE__*/function () {
-                              var _ref18 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee18(transactionCredit) {
+                              var _ref18 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee18(transactionCredit) {
                                 var transactionTransactionAux, transactionTransactionIdReturn;
-                                return regeneratorRuntime.wrap(function _callee18$(_context18) {
+                                return _regenerator["default"].wrap(function _callee18$(_context18) {
                                   while (1) {
                                     switch (_context18.prev = _context18.next) {
                                       case 0:
@@ -1734,9 +1734,9 @@ var Controller = /*#__PURE__*/function () {
                           case 32:
                             transactionTransactionIds = _context21.sent;
                             transactionCredits.map( /*#__PURE__*/function () {
-                              var _ref19 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee19(transactionCredit) {
+                              var _ref19 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee19(transactionCredit) {
                                 var transactionIdReturn;
-                                return regeneratorRuntime.wrap(function _callee19$(_context19) {
+                                return _regenerator["default"].wrap(function _callee19$(_context19) {
                                   while (1) {
                                     switch (_context19.prev = _context19.next) {
                                       case 0:
@@ -1794,9 +1794,9 @@ var Controller = /*#__PURE__*/function () {
                             }());
                             _context21.next = 36;
                             return Promise.all(movementOfCashs.map( /*#__PURE__*/function () {
-                              var _ref20 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee20(movementOfCash) {
+                              var _ref20 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee20(movementOfCash) {
                                 var movementOfCashAux, movementOfCashIdReturn;
-                                return regeneratorRuntime.wrap(function _callee20$(_context20) {
+                                return _regenerator["default"].wrap(function _callee20$(_context20) {
                                   while (1) {
                                     switch (_context20.prev = _context20.next) {
                                       case 0:
@@ -1955,15 +1955,15 @@ var Controller = /*#__PURE__*/function () {
   }, {
     key: "sendCardToTrello",
     value: function () {
-      var _sendCardToTrello = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee32(responserService, trelloService, claimName, claimDescription, database) {
-        return regeneratorRuntime.wrap(function _callee32$(_context32) {
+      var _sendCardToTrello = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee32(responserService, trelloService, claimName, claimDescription, database) {
+        return _regenerator["default"].wrap(function _callee32$(_context32) {
           while (1) {
             switch (_context32.prev = _context32.next) {
               case 0:
                 return _context32.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref21 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee31(resolve, reject) {
+                  var _ref21 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee31(resolve, reject) {
                     var shortURL, key, token, keyColo, tokenColo, listName, boardId, listId, cardId;
-                    return regeneratorRuntime.wrap(function _callee31$(_context31) {
+                    return _regenerator["default"].wrap(function _callee31$(_context31) {
                       while (1) {
                         switch (_context31.prev = _context31.next) {
                           case 0:
@@ -1978,8 +1978,8 @@ var Controller = /*#__PURE__*/function () {
                             cardId = '';
                             _context31.next = 11;
                             return trelloService.getBoardId(responserService, shortURL, key, token).then( /*#__PURE__*/function () {
-                              var _ref22 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee30(res) {
-                                return regeneratorRuntime.wrap(function _callee30$(_context30) {
+                              var _ref22 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee30(res) {
+                                return _regenerator["default"].wrap(function _callee30$(_context30) {
                                   while (1) {
                                     switch (_context30.prev = _context30.next) {
                                       case 0:
@@ -1991,8 +1991,8 @@ var Controller = /*#__PURE__*/function () {
                                         boardId = res.result;
                                         _context30.next = 4;
                                         return trelloService.getListId(listName, responserService, boardId, key, token).then( /*#__PURE__*/function () {
-                                          var _ref23 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee29(res) {
-                                            return regeneratorRuntime.wrap(function _callee29$(_context29) {
+                                          var _ref23 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee29(res) {
+                                            return _regenerator["default"].wrap(function _callee29$(_context29) {
                                               while (1) {
                                                 switch (_context29.prev = _context29.next) {
                                                   case 0:
@@ -2004,8 +2004,8 @@ var Controller = /*#__PURE__*/function () {
                                                     listId = res.result;
                                                     _context29.next = 4;
                                                     return trelloService.sendCard(claimName, claimDescription, responserService, listId, key, token).then( /*#__PURE__*/function () {
-                                                      var _ref24 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee28(res) {
-                                                        return regeneratorRuntime.wrap(function _callee28$(_context28) {
+                                                      var _ref24 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee28(res) {
+                                                        return _regenerator["default"].wrap(function _callee28$(_context28) {
                                                           while (1) {
                                                             switch (_context28.prev = _context28.next) {
                                                               case 0:
@@ -2024,8 +2024,8 @@ var Controller = /*#__PURE__*/function () {
 
                                                                 _context28.next = 5;
                                                                 return trelloService.getLabelId(database, responserService, boardId, key, token).then( /*#__PURE__*/function () {
-                                                                  var _ref25 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee27(res) {
-                                                                    return regeneratorRuntime.wrap(function _callee27$(_context27) {
+                                                                  var _ref25 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee27(res) {
+                                                                    return _regenerator["default"].wrap(function _callee27$(_context27) {
                                                                       while (1) {
                                                                         switch (_context27.prev = _context27.next) {
                                                                           case 0:
@@ -2041,8 +2041,8 @@ var Controller = /*#__PURE__*/function () {
 
                                                                             _context27.next = 4;
                                                                             return trelloService.saveCard(res.result, responserService, cardId, key, token).then( /*#__PURE__*/function () {
-                                                                              var _ref26 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee23(res) {
-                                                                                return regeneratorRuntime.wrap(function _callee23$(_context23) {
+                                                                              var _ref26 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee23(res) {
+                                                                                return _regenerator["default"].wrap(function _callee23$(_context23) {
                                                                                   while (1) {
                                                                                     switch (_context23.prev = _context23.next) {
                                                                                       case 0:
@@ -2079,15 +2079,15 @@ var Controller = /*#__PURE__*/function () {
 
                                                                             _context27.next = 9;
                                                                             return trelloService.saveLabel(database, 'blue', responserService, boardId, key, token).then( /*#__PURE__*/function () {
-                                                                              var _ref27 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee26(res) {
-                                                                                return regeneratorRuntime.wrap(function _callee26$(_context26) {
+                                                                              var _ref27 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee26(res) {
+                                                                                return _regenerator["default"].wrap(function _callee26$(_context26) {
                                                                                   while (1) {
                                                                                     switch (_context26.prev = _context26.next) {
                                                                                       case 0:
                                                                                         _context26.next = 2;
                                                                                         return trelloService.getLabelId(database, responserService, boardId, key, token).then( /*#__PURE__*/function () {
-                                                                                          var _ref28 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee25(res) {
-                                                                                            return regeneratorRuntime.wrap(function _callee25$(_context25) {
+                                                                                          var _ref28 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee25(res) {
+                                                                                            return _regenerator["default"].wrap(function _callee25$(_context25) {
                                                                                               while (1) {
                                                                                                 switch (_context25.prev = _context25.next) {
                                                                                                   case 0:
@@ -2103,8 +2103,8 @@ var Controller = /*#__PURE__*/function () {
 
                                                                                                     _context25.next = 4;
                                                                                                     return trelloService.saveCard(res.result, responserService, cardId, key, token).then( /*#__PURE__*/function () {
-                                                                                                      var _ref29 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee24(res) {
-                                                                                                        return regeneratorRuntime.wrap(function _callee24$(_context24) {
+                                                                                                      var _ref29 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee24(res) {
+                                                                                                        return _regenerator["default"].wrap(function _callee24$(_context24) {
                                                                                                           while (1) {
                                                                                                             switch (_context24.prev = _context24.next) {
                                                                                                               case 0:
@@ -2329,7 +2329,6 @@ var Controller = /*#__PURE__*/function () {
       return sendCardToTrello;
     }()
   }]);
-
   return Controller;
 }();
 

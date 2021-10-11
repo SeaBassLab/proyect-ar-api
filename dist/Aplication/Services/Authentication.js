@@ -1,9 +1,27 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _initializerDefineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/initializerDefineProperty"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _applyDecoratedDescriptor2 = _interopRequireDefault(require("@babel/runtime/helpers/applyDecoratedDescriptor"));
+
+var _initializerWarningHelper2 = _interopRequireDefault(require("@babel/runtime/helpers/initializerWarningHelper"));
 
 var _inversify = require("inversify");
 
@@ -15,65 +33,39 @@ var _Responser = _interopRequireDefault(require("../../Domain/Entities/Util/Resp
 
 var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
-
-function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
-
 var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.inject)(_TYPES["default"].UserServiceableDomain), _dec3 = (0, _inversify.inject)(_TYPES["default"].SubscriptionServiceableDomain), _dec4 = (0, _inversify.inject)(_TYPES["default"].CompanyServiceableDomain), _dec5 = (0, _inversify.inject)(_TYPES["default"].CreateableToken), _dec6 = (0, _inversify.inject)(_TYPES["default"].Controlleable), _dec7 = (0, _inversify.inject)(_TYPES["default"].SendeableMail), _dec(_class = (_class2 = /*#__PURE__*/function () {
   function Authentication() {
-    _classCallCheck(this, Authentication);
-
-    _initializerDefineProperty(this, "userService", _descriptor, this);
-
-    _initializerDefineProperty(this, "subscriptionService", _descriptor2, this);
-
-    _initializerDefineProperty(this, "companyService", _descriptor3, this);
-
-    _initializerDefineProperty(this, "tokenProvider", _descriptor4, this);
-
-    _initializerDefineProperty(this, "controllerService", _descriptor5, this);
-
-    _initializerDefineProperty(this, "sendMailController", _descriptor6, this);
+    (0, _classCallCheck2["default"])(this, Authentication);
+    (0, _initializerDefineProperty2["default"])(this, "userService", _descriptor, this);
+    (0, _initializerDefineProperty2["default"])(this, "subscriptionService", _descriptor2, this);
+    (0, _initializerDefineProperty2["default"])(this, "companyService", _descriptor3, this);
+    (0, _initializerDefineProperty2["default"])(this, "tokenProvider", _descriptor4, this);
+    (0, _initializerDefineProperty2["default"])(this, "controllerService", _descriptor5, this);
+    (0, _initializerDefineProperty2["default"])(this, "sendMailController", _descriptor6, this);
   }
 
-  _createClass(Authentication, [{
+  (0, _createClass2["default"])(Authentication, [{
     key: "getPass",
     value: function () {
-      var _getPass = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(user, pass, userModel) {
+      var _getPass = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee6(user, pass, userModel) {
         var _this = this;
 
-        return regeneratorRuntime.wrap(function _callee6$(_context6) {
+        return _regenerator["default"].wrap(function _callee6$(_context6) {
           while (1) {
             switch (_context6.prev = _context6.next) {
               case 0:
                 return _context6.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(resolve, reject) {
+                  var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(resolve, reject) {
                     var responserService;
-                    return regeneratorRuntime.wrap(function _callee5$(_context5) {
+                    return _regenerator["default"].wrap(function _callee5$(_context5) {
                       while (1) {
                         switch (_context5.prev = _context5.next) {
                           case 0:
                             responserService = new _Responser["default"]();
                             _context5.next = 3;
                             return _this.userService.existUserWithThatUser(user, userModel).then( /*#__PURE__*/function () {
-                              var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(res) {
-                                return regeneratorRuntime.wrap(function _callee4$(_context4) {
+                              var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(res) {
+                                return _regenerator["default"].wrap(function _callee4$(_context4) {
                                   while (1) {
                                     switch (_context4.prev = _context4.next) {
                                       case 0:
@@ -89,9 +81,9 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
 
                                         _context4.next = 4;
                                         return _this.userService.hashPassword(pass).then( /*#__PURE__*/function () {
-                                          var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(res) {
+                                          var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(res) {
                                             var hash;
-                                            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                                            return _regenerator["default"].wrap(function _callee3$(_context3) {
                                               while (1) {
                                                 switch (_context3.prev = _context3.next) {
                                                   case 0:
@@ -108,10 +100,10 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                                                       },
                                                       user: user
                                                     }, {}, {}, 1, 0).then( /*#__PURE__*/function () {
-                                                      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(res) {
+                                                      var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(res) {
                                                         var _id;
 
-                                                        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                                                        return _regenerator["default"].wrap(function _callee2$(_context2) {
                                                           while (1) {
                                                             switch (_context2.prev = _context2.next) {
                                                               case 0:
@@ -125,8 +117,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                                                                 return _this.controllerService.update(_id, {
                                                                   password: hash
                                                                 }, userModel, userModel, _id).then( /*#__PURE__*/function () {
-                                                                  var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(res) {
-                                                                    return regeneratorRuntime.wrap(function _callee$(_context) {
+                                                                  var _ref5 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(res) {
+                                                                    return _regenerator["default"].wrap(function _callee$(_context) {
                                                                       while (1) {
                                                                         switch (_context.prev = _context.next) {
                                                                           case 0:
@@ -308,25 +300,25 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
   }, {
     key: "resetPass",
     value: function () {
-      var _resetPass = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee9(user, userModel, mailModel) {
+      var _resetPass = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee9(user, userModel, mailModel) {
         var _this2 = this;
 
-        return regeneratorRuntime.wrap(function _callee9$(_context9) {
+        return _regenerator["default"].wrap(function _callee9$(_context9) {
           while (1) {
             switch (_context9.prev = _context9.next) {
               case 0:
                 return _context9.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8(resolve, reject) {
+                  var _ref6 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee8(resolve, reject) {
                     var responserService;
-                    return regeneratorRuntime.wrap(function _callee8$(_context8) {
+                    return _regenerator["default"].wrap(function _callee8$(_context8) {
                       while (1) {
                         switch (_context8.prev = _context8.next) {
                           case 0:
                             responserService = new _Responser["default"]();
                             _context8.next = 3;
                             return _this2.userService.existUserWithThatUser(user, userModel).then( /*#__PURE__*/function () {
-                              var _ref7 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7(res) {
-                                return regeneratorRuntime.wrap(function _callee7$(_context7) {
+                              var _ref7 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee7(res) {
+                                return _regenerator["default"].wrap(function _callee7$(_context7) {
                                   while (1) {
                                     switch (_context7.prev = _context7.next) {
                                       case 0:
@@ -454,17 +446,17 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
   }, {
     key: "register",
     value: function () {
-      var _register = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee15(userData, database, model, companyModel, mailModel, subscriptionModel) {
+      var _register = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee15(userData, database, model, companyModel, mailModel, subscriptionModel) {
         var _this3 = this;
 
-        return regeneratorRuntime.wrap(function _callee15$(_context15) {
+        return _regenerator["default"].wrap(function _callee15$(_context15) {
           while (1) {
             switch (_context15.prev = _context15.next) {
               case 0:
                 return _context15.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref8 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee14(resolve, reject) {
+                  var _ref8 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee14(resolve, reject) {
                     var responserService, register, companyId;
-                    return regeneratorRuntime.wrap(function _callee14$(_context14) {
+                    return _regenerator["default"].wrap(function _callee14$(_context14) {
                       while (1) {
                         switch (_context14.prev = _context14.next) {
                           case 0:
@@ -473,8 +465,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                             companyId = '';
                             _context14.next = 5;
                             return _this3.userService.existUserWithThatEmail(userData.email, model).then( /*#__PURE__*/function () {
-                              var _ref9 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee13(res) {
-                                return regeneratorRuntime.wrap(function _callee13$(_context13) {
+                              var _ref9 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee13(res) {
+                                return _regenerator["default"].wrap(function _callee13$(_context13) {
                                   while (1) {
                                     switch (_context13.prev = _context13.next) {
                                       case 0:
@@ -490,8 +482,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
 
                                         _context13.next = 4;
                                         return _this3.userService.hashPassword(userData.password).then( /*#__PURE__*/function () {
-                                          var _ref10 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee12(res) {
-                                            return regeneratorRuntime.wrap(function _callee12$(_context12) {
+                                          var _ref10 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee12(res) {
+                                            return _regenerator["default"].wrap(function _callee12$(_context12) {
                                               while (1) {
                                                 switch (_context12.prev = _context12.next) {
                                                   case 0:
@@ -508,8 +500,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                                                         $ne: 'D'
                                                       }
                                                     }, {}, {}, 0, 0).then( /*#__PURE__*/function () {
-                                                      var _ref11 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee11(res) {
-                                                        return regeneratorRuntime.wrap(function _callee11$(_context11) {
+                                                      var _ref11 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee11(res) {
+                                                        return _regenerator["default"].wrap(function _callee11$(_context11) {
                                                           while (1) {
                                                             switch (_context11.prev = _context11.next) {
                                                               case 0:
@@ -527,8 +519,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                                                                 return _this3.companyService.save({
                                                                   name: database
                                                                 }, companyModel).then( /*#__PURE__*/function () {
-                                                                  var _ref12 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee10(res) {
-                                                                    return regeneratorRuntime.wrap(function _callee10$(_context10) {
+                                                                  var _ref12 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee10(res) {
+                                                                    return _regenerator["default"].wrap(function _callee10$(_context10) {
                                                                       while (1) {
                                                                         switch (_context10.prev = _context10.next) {
                                                                           case 0:
@@ -781,17 +773,17 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
   }, {
     key: "registerWithUser",
     value: function () {
-      var _registerWithUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee21(userData, database, model, companyModel, mailModel, subscriptionModel) {
+      var _registerWithUser = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee21(userData, database, model, companyModel, mailModel, subscriptionModel) {
         var _this4 = this;
 
-        return regeneratorRuntime.wrap(function _callee21$(_context21) {
+        return _regenerator["default"].wrap(function _callee21$(_context21) {
           while (1) {
             switch (_context21.prev = _context21.next) {
               case 0:
                 return _context21.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref13 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee20(resolve, reject) {
+                  var _ref13 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee20(resolve, reject) {
                     var responserService, register, companyId;
-                    return regeneratorRuntime.wrap(function _callee20$(_context20) {
+                    return _regenerator["default"].wrap(function _callee20$(_context20) {
                       while (1) {
                         switch (_context20.prev = _context20.next) {
                           case 0:
@@ -800,8 +792,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                             companyId = '';
                             _context20.next = 5;
                             return _this4.userService.existUserWithThatUser(userData.user, model).then( /*#__PURE__*/function () {
-                              var _ref14 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee19(res) {
-                                return regeneratorRuntime.wrap(function _callee19$(_context19) {
+                              var _ref14 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee19(res) {
+                                return _regenerator["default"].wrap(function _callee19$(_context19) {
                                   while (1) {
                                     switch (_context19.prev = _context19.next) {
                                       case 0:
@@ -817,8 +809,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
 
                                         _context19.next = 4;
                                         return _this4.userService.hashPassword(userData.password).then( /*#__PURE__*/function () {
-                                          var _ref15 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee18(res) {
-                                            return regeneratorRuntime.wrap(function _callee18$(_context18) {
+                                          var _ref15 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee18(res) {
+                                            return _regenerator["default"].wrap(function _callee18$(_context18) {
                                               while (1) {
                                                 switch (_context18.prev = _context18.next) {
                                                   case 0:
@@ -835,8 +827,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                                                         $ne: 'D'
                                                       }
                                                     }, {}, {}, 0, 0).then( /*#__PURE__*/function () {
-                                                      var _ref16 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee17(res) {
-                                                        return regeneratorRuntime.wrap(function _callee17$(_context17) {
+                                                      var _ref16 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee17(res) {
+                                                        return _regenerator["default"].wrap(function _callee17$(_context17) {
                                                           while (1) {
                                                             switch (_context17.prev = _context17.next) {
                                                               case 0:
@@ -854,8 +846,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                                                                 return _this4.companyService.save({
                                                                   name: database
                                                                 }, companyModel).then( /*#__PURE__*/function () {
-                                                                  var _ref17 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee16(res) {
-                                                                    return regeneratorRuntime.wrap(function _callee16$(_context16) {
+                                                                  var _ref17 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee16(res) {
+                                                                    return _regenerator["default"].wrap(function _callee16$(_context16) {
                                                                       while (1) {
                                                                         switch (_context16.prev = _context16.next) {
                                                                           case 0:
@@ -1115,17 +1107,17 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
   }, {
     key: "login",
     value: function () {
-      var _login = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee26(loginData, database, model, permissionModel) {
+      var _login = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee26(loginData, database, model, permissionModel) {
         var _this5 = this;
 
-        return regeneratorRuntime.wrap(function _callee26$(_context26) {
+        return _regenerator["default"].wrap(function _callee26$(_context26) {
           while (1) {
             switch (_context26.prev = _context26.next) {
               case 0:
                 return _context26.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref18 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee25(resolve, reject) {
+                  var _ref18 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee25(resolve, reject) {
                     var responserService, login;
-                    return regeneratorRuntime.wrap(function _callee25$(_context25) {
+                    return _regenerator["default"].wrap(function _callee25$(_context25) {
                       while (1) {
                         switch (_context25.prev = _context25.next) {
                           case 0:
@@ -1133,8 +1125,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                             login = new _UserToken["default"]();
                             _context25.next = 4;
                             return _this5.userService.existUserWithThatEmail(loginData.email, model).then( /*#__PURE__*/function () {
-                              var _ref19 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee24(res) {
-                                return regeneratorRuntime.wrap(function _callee24$(_context24) {
+                              var _ref19 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee24(res) {
+                                return _regenerator["default"].wrap(function _callee24$(_context24) {
                                   while (1) {
                                     switch (_context24.prev = _context24.next) {
                                       case 0:
@@ -1150,8 +1142,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
 
                                         _context24.next = 4;
                                         return _this5.userService.getUserByEmail(loginData.email, model, permissionModel).then( /*#__PURE__*/function () {
-                                          var _ref20 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee23(res) {
-                                            return regeneratorRuntime.wrap(function _callee23$(_context23) {
+                                          var _ref20 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee23(res) {
+                                            return _regenerator["default"].wrap(function _callee23$(_context23) {
                                               while (1) {
                                                 switch (_context23.prev = _context23.next) {
                                                   case 0:
@@ -1163,8 +1155,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                                                     login.user = res.result;
                                                     _context23.next = 4;
                                                     return _this5.userService.isMatch(loginData.password, login.user.password).then( /*#__PURE__*/function () {
-                                                      var _ref21 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee22(res) {
-                                                        return regeneratorRuntime.wrap(function _callee22$(_context22) {
+                                                      var _ref21 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee22(res) {
+                                                        return _regenerator["default"].wrap(function _callee22$(_context22) {
                                                           while (1) {
                                                             switch (_context22.prev = _context22.next) {
                                                               case 0:
@@ -1372,17 +1364,17 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
   }, {
     key: "loginWithUser",
     value: function () {
-      var _loginWithUser = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee31(loginData, database, model) {
+      var _loginWithUser = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee31(loginData, database, model) {
         var _this6 = this;
 
-        return regeneratorRuntime.wrap(function _callee31$(_context31) {
+        return _regenerator["default"].wrap(function _callee31$(_context31) {
           while (1) {
             switch (_context31.prev = _context31.next) {
               case 0:
                 return _context31.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref22 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee30(resolve, reject) {
+                  var _ref22 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee30(resolve, reject) {
                     var responserService, login;
-                    return regeneratorRuntime.wrap(function _callee30$(_context30) {
+                    return _regenerator["default"].wrap(function _callee30$(_context30) {
                       while (1) {
                         switch (_context30.prev = _context30.next) {
                           case 0:
@@ -1390,8 +1382,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                             login = new _UserToken["default"]();
                             _context30.next = 4;
                             return _this6.userService.existUserWithThatUser(loginData.user, model).then( /*#__PURE__*/function () {
-                              var _ref23 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee29(res) {
-                                return regeneratorRuntime.wrap(function _callee29$(_context29) {
+                              var _ref23 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee29(res) {
+                                return _regenerator["default"].wrap(function _callee29$(_context29) {
                                   while (1) {
                                     switch (_context29.prev = _context29.next) {
                                       case 0:
@@ -1407,8 +1399,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
 
                                         _context29.next = 4;
                                         return _this6.userService.getUserByUser(loginData.user, model).then( /*#__PURE__*/function () {
-                                          var _ref24 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee28(res) {
-                                            return regeneratorRuntime.wrap(function _callee28$(_context28) {
+                                          var _ref24 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee28(res) {
+                                            return _regenerator["default"].wrap(function _callee28$(_context28) {
                                               while (1) {
                                                 switch (_context28.prev = _context28.next) {
                                                   case 0:
@@ -1420,8 +1412,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                                                     login.user = res.result;
                                                     _context28.next = 4;
                                                     return _this6.userService.isMatch(loginData.password, login.user.password).then( /*#__PURE__*/function () {
-                                                      var _ref25 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee27(res) {
-                                                        return regeneratorRuntime.wrap(function _callee27$(_context27) {
+                                                      var _ref25 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee27(res) {
+                                                        return _regenerator["default"].wrap(function _callee27$(_context27) {
                                                           while (1) {
                                                             switch (_context27.prev = _context27.next) {
                                                               case 0:
@@ -1629,17 +1621,17 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
   }, {
     key: "loginVerified",
     value: function () {
-      var _loginVerified = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee34(loginData, database, model) {
+      var _loginVerified = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee34(loginData, database, model) {
         var _this7 = this;
 
-        return regeneratorRuntime.wrap(function _callee34$(_context34) {
+        return _regenerator["default"].wrap(function _callee34$(_context34) {
           while (1) {
             switch (_context34.prev = _context34.next) {
               case 0:
                 return _context34.abrupt("return", new Promise( /*#__PURE__*/function () {
-                  var _ref26 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee33(resolve, reject) {
+                  var _ref26 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee33(resolve, reject) {
                     var responserService, login;
-                    return regeneratorRuntime.wrap(function _callee33$(_context33) {
+                    return _regenerator["default"].wrap(function _callee33$(_context33) {
                       while (1) {
                         switch (_context33.prev = _context33.next) {
                           case 0:
@@ -1650,8 +1642,8 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
                             return _this7.controllerService.getAll(model, {}, {
                               user: loginData.password
                             }, {}, {}, 1, 0).then( /*#__PURE__*/function () {
-                              var _ref27 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee32(res) {
-                                return regeneratorRuntime.wrap(function _callee32$(_context32) {
+                              var _ref27 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee32(res) {
+                                return _regenerator["default"].wrap(function _callee32$(_context32) {
                                   while (1) {
                                     switch (_context32.prev = _context32.next) {
                                       case 0:
@@ -1767,34 +1759,33 @@ var Authentication = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversif
       return loginVerified;
     }()
   }]);
-
   return Authentication;
-}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "userService", [_dec2], {
+}(), (_descriptor = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "userService", [_dec2], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "subscriptionService", [_dec3], {
+}), _descriptor2 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "subscriptionService", [_dec3], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "companyService", [_dec4], {
+}), _descriptor3 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "companyService", [_dec4], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "tokenProvider", [_dec5], {
+}), _descriptor4 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "tokenProvider", [_dec5], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "controllerService", [_dec6], {
+}), _descriptor5 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "controllerService", [_dec6], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "sendMailController", [_dec7], {
+}), _descriptor6 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "sendMailController", [_dec7], {
   configurable: true,
   enumerable: true,
   writable: true,

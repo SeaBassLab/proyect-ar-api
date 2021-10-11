@@ -1,38 +1,35 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
 
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
 var _Dto = _interopRequireDefault(require("../../../Domain/Entities/VatCondition/Dto"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+//TODO resolver esta dependencia
 var Controller = /*#__PURE__*/function () {
   function Controller(router, validationProvider, authenticationMiddleware, connectionProvider, schema, controllerService, service, responserService) {
     var _this = this;
 
-    _classCallCheck(this, Controller);
-
-    _defineProperty(this, "path", '/vatCondition');
-
-    _defineProperty(this, "getAllObjs", /*#__PURE__*/function () {
-      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(request, response, next) {
+    (0, _classCallCheck2["default"])(this, Controller);
+    (0, _defineProperty2["default"])(this, "path", '/vatCondition');
+    (0, _defineProperty2["default"])(this, "getAllObjs", /*#__PURE__*/function () {
+      var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(request, response, next) {
         var model, error, project, match, sort, group, limit, skip, recivedProject, recivedMatch, recivedSort, recivedGroup, recivedLimit, recivedSkip;
-        return regeneratorRuntime.wrap(function _callee$(_context) {
+        return _regenerator["default"].wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
@@ -175,11 +172,10 @@ var Controller = /*#__PURE__*/function () {
         return _ref.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "saveObj", /*#__PURE__*/function () {
-      var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(request, response, next) {
+    (0, _defineProperty2["default"])(this, "saveObj", /*#__PURE__*/function () {
+      var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(request, response, next) {
         var model, objData, id;
-        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+        return _regenerator["default"].wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -197,9 +193,9 @@ var Controller = /*#__PURE__*/function () {
                     $ne: 'D'
                   }
                 }, {}, {}, 0, 0).then( /*#__PURE__*/function () {
-                  var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(res) {
+                  var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(res) {
                     var objs;
-                    return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                    return _regenerator["default"].wrap(function _callee2$(_context2) {
                       while (1) {
                         switch (_context2.prev = _context2.next) {
                           case 0:
@@ -287,11 +283,10 @@ var Controller = /*#__PURE__*/function () {
         return _ref2.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "updateObj", /*#__PURE__*/function () {
-      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(request, response, next) {
+    (0, _defineProperty2["default"])(this, "updateObj", /*#__PURE__*/function () {
+      var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(request, response, next) {
         var model, id, objData, idUser;
-        return regeneratorRuntime.wrap(function _callee5$(_context5) {
+        return _regenerator["default"].wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
@@ -305,8 +300,8 @@ var Controller = /*#__PURE__*/function () {
                 idUser = request.user._id;
                 _context5.next = 8;
                 return _this.service.getById(id, model, _this.controllerService).then( /*#__PURE__*/function () {
-                  var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(res) {
-                    return regeneratorRuntime.wrap(function _callee4$(_context4) {
+                  var _ref5 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(res) {
+                    return _regenerator["default"].wrap(function _callee4$(_context4) {
                       while (1) {
                         switch (_context4.prev = _context4.next) {
                           case 0:
@@ -409,11 +404,10 @@ var Controller = /*#__PURE__*/function () {
         return _ref4.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "deleteObj", /*#__PURE__*/function () {
-      var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7(request, response, next) {
+    (0, _defineProperty2["default"])(this, "deleteObj", /*#__PURE__*/function () {
+      var _ref6 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee7(request, response, next) {
         var model, id, idUser;
-        return regeneratorRuntime.wrap(function _callee7$(_context7) {
+        return _regenerator["default"].wrap(function _callee7$(_context7) {
           while (1) {
             switch (_context7.prev = _context7.next) {
               case 0:
@@ -426,9 +420,9 @@ var Controller = /*#__PURE__*/function () {
                 idUser = request.user._id;
                 _context7.next = 7;
                 return _this.service.getById(id, model, _this.controllerService).then( /*#__PURE__*/function () {
-                  var _ref7 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(getObjById) {
+                  var _ref7 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee6(getObjById) {
                     var obj;
-                    return regeneratorRuntime.wrap(function _callee6$(_context6) {
+                    return _regenerator["default"].wrap(function _callee6$(_context6) {
                       while (1) {
                         switch (_context6.prev = _context6.next) {
                           case 0:
@@ -516,7 +510,6 @@ var Controller = /*#__PURE__*/function () {
         return _ref6.apply(this, arguments);
       };
     }());
-
     this.router = router;
     this.validationProvider = validationProvider;
     this.authMid = authenticationMiddleware;
@@ -528,14 +521,13 @@ var Controller = /*#__PURE__*/function () {
     this.initializeRoutes(this.validationProvider);
   }
 
-  _createClass(Controller, [{
+  (0, _createClass2["default"])(Controller, [{
     key: "initializeRoutes",
     value: function initializeRoutes(validationProvider) {
       this.router.get(this.path, [this.authMid.authenticate], this.getAllObjs) //.get(`${this.path}/:id`, [this.authMid.authenticate], this.getObjById)
       .post(this.path, [this.authMid.authenticate, validationProvider.validate(_Dto["default"])], this.saveObj).put("".concat(this.path, "/:id"), [this.authMid.authenticate, validationProvider.validate(_Dto["default"], true)], this.updateObj)["delete"]("".concat(this.path, "/:id"), [this.authMid.authenticate], this.deleteObj);
     }
   }]);
-
   return Controller;
 }();
 

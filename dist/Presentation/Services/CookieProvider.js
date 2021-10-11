@@ -1,29 +1,28 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
 var CookieProvider = /*#__PURE__*/function () {
   function CookieProvider() {
-    _classCallCheck(this, CookieProvider);
+    (0, _classCallCheck2["default"])(this, CookieProvider);
   }
 
-  _createClass(CookieProvider, [{
+  (0, _createClass2["default"])(CookieProvider, [{
     key: "createCookie",
     value: function createCookie(token) {
       var cookie = "Authorization=".concat(token.token, "; path=/; HttpOnly; Max-Age=").concat(token.expiresIn);
       return cookie;
     }
   }]);
-
   return CookieProvider;
 }();
 

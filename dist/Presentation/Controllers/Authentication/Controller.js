@@ -1,9 +1,27 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+
+var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
+
+var _initializerDefineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/initializerDefineProperty"));
+
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
+var _applyDecoratedDescriptor2 = _interopRequireDefault(require("@babel/runtime/helpers/applyDecoratedDescriptor"));
+
+var _initializerWarningHelper2 = _interopRequireDefault(require("@babel/runtime/helpers/initializerWarningHelper"));
 
 var _inversify = require("inversify");
 
@@ -13,74 +31,35 @@ var _inversify2 = _interopRequireDefault(require("./../../../inversify.config"))
 
 var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _dec11, _dec12, _dec13, _dec14, _dec15, _dec16, _dec17, _dec18, _dec19, _dec20, _dec21, _dec22, _dec23, _dec24, _dec25, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _descriptor9, _descriptor10, _descriptor11, _descriptor12, _descriptor13, _descriptor14, _descriptor15;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
-
-function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
-
 var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.inject)(_TYPES["default"].Responseable), _dec3 = (0, _inversify.inject)(_TYPES["default"].GeteableModel), _dec4 = (0, _inversify.inject)(_TYPES["default"].Authenticable), _dec5 = (0, _inversify.inject)(_TYPES["default"].SessionServiceableDomain), _dec6 = (0, _inversify.inject)(_TYPES["default"].Schemable), _dec7 = (0, _inversify.named)(_TYPES["default"].User), _dec8 = (0, _inversify.inject)(_TYPES["default"].Schemable), _dec9 = (0, _inversify.named)(_TYPES["default"].Company), _dec10 = (0, _inversify.inject)(_TYPES["default"].Schemable), _dec11 = (0, _inversify.named)(_TYPES["default"].Session), _dec12 = (0, _inversify.inject)(_TYPES["default"].Schemable), _dec13 = (0, _inversify.named)(_TYPES["default"].Mail), _dec14 = (0, _inversify.inject)(_TYPES["default"].Schemable), _dec15 = (0, _inversify.named)(_TYPES["default"].Subscription), _dec16 = (0, _inversify.inject)(_TYPES["default"].Schemable), _dec17 = (0, _inversify.named)(_TYPES["default"].Permission), _dec18 = (0, _inversify.inject)(_TYPES["default"].Validable), _dec19 = (0, _inversify.named)(_TYPES["default"].Login), _dec20 = (0, _inversify.inject)(_TYPES["default"].Validable), _dec21 = (0, _inversify.named)(_TYPES["default"].User), _dec22 = (0, _inversify.inject)(_TYPES["default"].Validable), _dec23 = (0, _inversify.named)(_TYPES["default"].Session), _dec24 = (0, _inversify.inject)(_TYPES["default"].SessionInterface), _dec25 = (0, _inversify.inject)(_TYPES["default"].SessionBuilderable), _dec(_class = (_class2 = /*#__PURE__*/function () {
   function Controller() {
     var _this = this;
 
-    _classCallCheck(this, Controller);
-
-    _defineProperty(this, "router", _inversify2["default"].get(_TYPES["default"].Router));
-
-    _defineProperty(this, "path", '/auth');
-
-    _defineProperty(this, "validationProvider", _inversify2["default"].get(_TYPES["default"].Validateable));
-
-    _initializerDefineProperty(this, "responserService", _descriptor, this);
-
-    _initializerDefineProperty(this, "connectionProvider", _descriptor2, this);
-
-    _initializerDefineProperty(this, "authenticationService", _descriptor3, this);
-
-    _initializerDefineProperty(this, "sessionService", _descriptor4, this);
-
-    _initializerDefineProperty(this, "userSchema", _descriptor5, this);
-
-    _initializerDefineProperty(this, "companySchema", _descriptor6, this);
-
-    _initializerDefineProperty(this, "sessionSchema", _descriptor7, this);
-
-    _initializerDefineProperty(this, "mailSchema", _descriptor8, this);
-
-    _initializerDefineProperty(this, "subscriptionSchema", _descriptor9, this);
-
-    _initializerDefineProperty(this, "permissionSchema", _descriptor10, this);
-
-    _initializerDefineProperty(this, "loginDto", _descriptor11, this);
-
-    _initializerDefineProperty(this, "userDto", _descriptor12, this);
-
-    _initializerDefineProperty(this, "sessionDto", _descriptor13, this);
-
-    _initializerDefineProperty(this, "session", _descriptor14, this);
-
-    _initializerDefineProperty(this, "sessionBuilder", _descriptor15, this);
-
-    _defineProperty(this, "getPass", /*#__PURE__*/function () {
-      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(request, response, next) {
+    (0, _classCallCheck2["default"])(this, Controller);
+    (0, _defineProperty2["default"])(this, "router", _inversify2["default"].get(_TYPES["default"].Router));
+    (0, _defineProperty2["default"])(this, "path", '/auth');
+    (0, _defineProperty2["default"])(this, "validationProvider", _inversify2["default"].get(_TYPES["default"].Validateable));
+    (0, _initializerDefineProperty2["default"])(this, "responserService", _descriptor, this);
+    (0, _initializerDefineProperty2["default"])(this, "connectionProvider", _descriptor2, this);
+    (0, _initializerDefineProperty2["default"])(this, "authenticationService", _descriptor3, this);
+    (0, _initializerDefineProperty2["default"])(this, "sessionService", _descriptor4, this);
+    (0, _initializerDefineProperty2["default"])(this, "userSchema", _descriptor5, this);
+    (0, _initializerDefineProperty2["default"])(this, "companySchema", _descriptor6, this);
+    (0, _initializerDefineProperty2["default"])(this, "sessionSchema", _descriptor7, this);
+    (0, _initializerDefineProperty2["default"])(this, "mailSchema", _descriptor8, this);
+    (0, _initializerDefineProperty2["default"])(this, "subscriptionSchema", _descriptor9, this);
+    (0, _initializerDefineProperty2["default"])(this, "permissionSchema", _descriptor10, this);
+    (0, _initializerDefineProperty2["default"])(this, "loginDto", _descriptor11, this);
+    (0, _initializerDefineProperty2["default"])(this, "userDto", _descriptor12, this);
+    (0, _initializerDefineProperty2["default"])(this, "sessionDto", _descriptor13, this);
+    (0, _initializerDefineProperty2["default"])(this, "session", _descriptor14, this);
+    (0, _initializerDefineProperty2["default"])(this, "sessionBuilder", _descriptor15, this);
+    (0, _defineProperty2["default"])(this, "getPass", /*#__PURE__*/function () {
+      var _ref = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(request, response, next) {
         var _this$responserServic, _this$responserServic2;
 
         var db, user, pass, userModel;
-        return regeneratorRuntime.wrap(function _callee$(_context) {
+        return _regenerator["default"].wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
@@ -157,11 +136,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         return _ref.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "resetPass", /*#__PURE__*/function () {
-      var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(request, response, next) {
+    (0, _defineProperty2["default"])(this, "resetPass", /*#__PURE__*/function () {
+      var _ref2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2(request, response, next) {
         var db, user, userModel, mailModel;
-        return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        return _regenerator["default"].wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
@@ -240,11 +218,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         return _ref2.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "registrationFacebook", /*#__PURE__*/function () {
-      var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(request, response, next) {
+    (0, _defineProperty2["default"])(this, "registrationFacebook", /*#__PURE__*/function () {
+      var _ref3 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3(request, response, next) {
         var userData, database, subscriptionModel, mailModel, sessionModel, companyModel, model;
-        return regeneratorRuntime.wrap(function _callee3$(_context3) {
+        return _regenerator["default"].wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
@@ -347,11 +324,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         return _ref3.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "registrationGoogle", /*#__PURE__*/function () {
-      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(request, response, next) {
+    (0, _defineProperty2["default"])(this, "registrationGoogle", /*#__PURE__*/function () {
+      var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(request, response, next) {
         var userData, database, subscriptionModel, mailModel, sessionModel, companyModel, model;
-        return regeneratorRuntime.wrap(function _callee4$(_context4) {
+        return _regenerator["default"].wrap(function _callee4$(_context4) {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
@@ -454,11 +430,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         return _ref4.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "registration", /*#__PURE__*/function () {
-      var _ref5 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(request, response, next) {
+    (0, _defineProperty2["default"])(this, "registration", /*#__PURE__*/function () {
+      var _ref5 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5(request, response, next) {
         var userData, database, subscriptionModel, mailModel, sessionModel, companyModel, model;
-        return regeneratorRuntime.wrap(function _callee5$(_context5) {
+        return _regenerator["default"].wrap(function _callee5$(_context5) {
           while (1) {
             switch (_context5.prev = _context5.next) {
               case 0:
@@ -556,11 +531,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         return _ref5.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "registrationWithUser", /*#__PURE__*/function () {
-      var _ref6 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(request, response, next) {
+    (0, _defineProperty2["default"])(this, "registrationWithUser", /*#__PURE__*/function () {
+      var _ref6 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee6(request, response, next) {
         var userData, database, subscriptionModel, mailModel, sessionModel, companyModel, model;
-        return regeneratorRuntime.wrap(function _callee6$(_context6) {
+        return _regenerator["default"].wrap(function _callee6$(_context6) {
           while (1) {
             switch (_context6.prev = _context6.next) {
               case 0:
@@ -658,11 +632,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         return _ref6.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "loggingIn", /*#__PURE__*/function () {
-      var _ref7 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee9(request, response, next) {
+    (0, _defineProperty2["default"])(this, "loggingIn", /*#__PURE__*/function () {
+      var _ref7 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee9(request, response, next) {
         var logInData, database, sessionModel, permissionModel;
-        return regeneratorRuntime.wrap(function _callee9$(_context9) {
+        return _regenerator["default"].wrap(function _callee9$(_context9) {
           while (1) {
             switch (_context9.prev = _context9.next) {
               case 0:
@@ -686,15 +659,15 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
 
                 _context9.next = 11;
                 return _this.connectionProvider.getModel(database, _this.userSchema.name, _this.userSchema).then( /*#__PURE__*/function () {
-                  var _ref8 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8(model) {
-                    return regeneratorRuntime.wrap(function _callee8$(_context8) {
+                  var _ref8 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee8(model) {
+                    return _regenerator["default"].wrap(function _callee8$(_context8) {
                       while (1) {
                         switch (_context8.prev = _context8.next) {
                           case 0:
                             _context8.next = 2;
                             return _this.authenticationService.login(logInData, database, model, permissionModel).then( /*#__PURE__*/function () {
-                              var _ref9 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7(res) {
-                                return regeneratorRuntime.wrap(function _callee7$(_context7) {
+                              var _ref9 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee7(res) {
+                                return _regenerator["default"].wrap(function _callee7$(_context7) {
                                   while (1) {
                                     switch (_context7.prev = _context7.next) {
                                       case 0:
@@ -822,11 +795,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         return _ref7.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "loggingInWithUser", /*#__PURE__*/function () {
-      var _ref10 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee12(request, response, next) {
+    (0, _defineProperty2["default"])(this, "loggingInWithUser", /*#__PURE__*/function () {
+      var _ref10 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee12(request, response, next) {
         var logInData, database, sessionModel;
-        return regeneratorRuntime.wrap(function _callee12$(_context12) {
+        return _regenerator["default"].wrap(function _callee12$(_context12) {
           while (1) {
             switch (_context12.prev = _context12.next) {
               case 0:
@@ -845,15 +817,15 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
 
                 _context12.next = 8;
                 return _this.connectionProvider.getModel(database, _this.userSchema.name, _this.userSchema).then( /*#__PURE__*/function () {
-                  var _ref11 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee11(model) {
-                    return regeneratorRuntime.wrap(function _callee11$(_context11) {
+                  var _ref11 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee11(model) {
+                    return _regenerator["default"].wrap(function _callee11$(_context11) {
                       while (1) {
                         switch (_context11.prev = _context11.next) {
                           case 0:
                             _context11.next = 2;
                             return _this.authenticationService.loginWithUser(logInData, database, model).then( /*#__PURE__*/function () {
-                              var _ref12 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee10(res) {
-                                return regeneratorRuntime.wrap(function _callee10$(_context10) {
+                              var _ref12 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee10(res) {
+                                return _regenerator["default"].wrap(function _callee10$(_context10) {
                                   while (1) {
                                     switch (_context10.prev = _context10.next) {
                                       case 0:
@@ -981,11 +953,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         return _ref10.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "loggingInVerified", /*#__PURE__*/function () {
-      var _ref13 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee15(request, response, next) {
+    (0, _defineProperty2["default"])(this, "loggingInVerified", /*#__PURE__*/function () {
+      var _ref13 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee15(request, response, next) {
         var logInData, database, sessionModel;
-        return regeneratorRuntime.wrap(function _callee15$(_context15) {
+        return _regenerator["default"].wrap(function _callee15$(_context15) {
           while (1) {
             switch (_context15.prev = _context15.next) {
               case 0:
@@ -1004,15 +975,15 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
 
                 _context15.next = 8;
                 return _this.connectionProvider.getModel(database, _this.userSchema.name, _this.userSchema).then( /*#__PURE__*/function () {
-                  var _ref14 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee14(model) {
-                    return regeneratorRuntime.wrap(function _callee14$(_context14) {
+                  var _ref14 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee14(model) {
+                    return _regenerator["default"].wrap(function _callee14$(_context14) {
                       while (1) {
                         switch (_context14.prev = _context14.next) {
                           case 0:
                             _context14.next = 2;
                             return _this.authenticationService.loginVerified(logInData, database, model).then( /*#__PURE__*/function () {
-                              var _ref15 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee13(res) {
-                                return regeneratorRuntime.wrap(function _callee13$(_context13) {
+                              var _ref15 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee13(res) {
+                                return _regenerator["default"].wrap(function _callee13$(_context13) {
                                   while (1) {
                                     switch (_context13.prev = _context13.next) {
                                       case 0:
@@ -1140,8 +1111,7 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         return _ref13.apply(this, arguments);
       };
     }());
-
-    _defineProperty(this, "loggingOut", function (request, response) {
+    (0, _defineProperty2["default"])(this, "loggingOut", function (request, response) {
       _this.responserService.res = {
         result: {
           user: {},
@@ -1158,11 +1128,10 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
         response.status(500).send(_this.responserService.res);
       }
     });
-
     this.initializeRoutes(this.validationProvider);
   }
 
-  _createClass(Controller, [{
+  (0, _createClass2["default"])(Controller, [{
     key: "initializeRoutes",
     value: function initializeRoutes(validationProvider) {
       this.router.get("".concat(this.path, "/get/:db/:user/:pass"), [], this.getPass);
@@ -1177,79 +1146,78 @@ var Controller = (_dec = (0, _inversify.injectable)(), _dec2 = (0, _inversify.in
       this.router.post("".concat(this.path, "/logout"), this.loggingOut);
     }
   }]);
-
   return Controller;
-}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "responserService", [_dec2], {
+}(), (_descriptor = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "responserService", [_dec2], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, "connectionProvider", [_dec3], {
+}), _descriptor2 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "connectionProvider", [_dec3], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "authenticationService", [_dec4], {
+}), _descriptor3 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "authenticationService", [_dec4], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "sessionService", [_dec5], {
+}), _descriptor4 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "sessionService", [_dec5], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor5 = _applyDecoratedDescriptor(_class2.prototype, "userSchema", [_dec6, _dec7], {
+}), _descriptor5 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "userSchema", [_dec6, _dec7], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor6 = _applyDecoratedDescriptor(_class2.prototype, "companySchema", [_dec8, _dec9], {
+}), _descriptor6 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "companySchema", [_dec8, _dec9], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "sessionSchema", [_dec10, _dec11], {
+}), _descriptor7 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "sessionSchema", [_dec10, _dec11], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "mailSchema", [_dec12, _dec13], {
+}), _descriptor8 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "mailSchema", [_dec12, _dec13], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor9 = _applyDecoratedDescriptor(_class2.prototype, "subscriptionSchema", [_dec14, _dec15], {
+}), _descriptor9 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "subscriptionSchema", [_dec14, _dec15], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor10 = _applyDecoratedDescriptor(_class2.prototype, "permissionSchema", [_dec16, _dec17], {
+}), _descriptor10 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "permissionSchema", [_dec16, _dec17], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor11 = _applyDecoratedDescriptor(_class2.prototype, "loginDto", [_dec18, _dec19], {
+}), _descriptor11 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "loginDto", [_dec18, _dec19], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor12 = _applyDecoratedDescriptor(_class2.prototype, "userDto", [_dec20, _dec21], {
+}), _descriptor12 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "userDto", [_dec20, _dec21], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor13 = _applyDecoratedDescriptor(_class2.prototype, "sessionDto", [_dec22, _dec23], {
+}), _descriptor13 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "sessionDto", [_dec22, _dec23], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor14 = _applyDecoratedDescriptor(_class2.prototype, "session", [_dec24], {
+}), _descriptor14 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "session", [_dec24], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor15 = _applyDecoratedDescriptor(_class2.prototype, "sessionBuilder", [_dec25], {
+}), _descriptor15 = (0, _applyDecoratedDescriptor2["default"])(_class2.prototype, "sessionBuilder", [_dec25], {
   configurable: true,
   enumerable: true,
   writable: true,

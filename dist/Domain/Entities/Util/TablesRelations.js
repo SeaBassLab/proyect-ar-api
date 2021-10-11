@@ -1,28 +1,27 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
 var TablesRelations = /*#__PURE__*/function () {
   function TablesRelations() {
-    _classCallCheck(this, TablesRelations);
-
-    _defineProperty(this, "relations", [{
+    (0, _classCallCheck2["default"])(this, TablesRelations);
+    (0, _defineProperty2["default"])(this, "relations", [{
       relation: ''
     }]);
   }
 
-  _createClass(TablesRelations, [{
+  (0, _createClass2["default"])(TablesRelations, [{
     key: "getRelations",
     value: function getRelations(property) {
       var propertyJson;
@@ -529,7 +528,6 @@ var TablesRelations = /*#__PURE__*/function () {
       return exist;
     }
   }]);
-
   return TablesRelations;
 }();
 
