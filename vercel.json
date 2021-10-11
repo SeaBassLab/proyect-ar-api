@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.ts",
+      "src": "dist/index.js",
       "use": "@vercel/node"
     }
   ],
@@ -13,7 +13,7 @@
     }
   ],
   "env": {
-    "CLUSTER": "@proyectar-cluster",
-    "DB_NAME": "@proyectar-db-name"
+    "CLUSTER": "@nueve-cluster",
+    "DB_NAME": "@nueve-db-name"
   }
 }

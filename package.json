@@ -5,6 +5,8 @@
 	"main": "api/server.ts",
 	"dependencies": {
 		"@afipsdk/afip.js": "^0.7.1",
+		"@babel/plugin-proposal-class-properties": "^7.14.5",
+		"@babel/plugin-transform-flow-strip-types": "^7.14.5",
 		"@types/bcrypt": "^3.0.0",
 		"@types/cookie-parser": "^1.4.1",
 		"@types/cors": "^2.8.6",
@@ -52,18 +54,22 @@
 		"xlsx": "^0.17.0"
 	},
 	"scripts": {
-		"start": "nodemon ./api/server.ts",
-		"dev": "ts-node ./api/server.ts",
+		"start": "nodemon src/index.ts --exec babel-node --extensions \".ts\"",
+		"dev": "ts-node src/index.ts",
 		"lint": "tslint -p tsconfig.json -c tslint.json",
-		"test": "jest"
+		"test": "jest",
+		"build": "babel --extensions .ts src --out-dir dist"
 	},
 	"author": "Marcin Wanago",
 	"license": "MIT",
 	"devDependencies": {
+		"@babel/cli": "^7.15.7",
+		"@babel/core": "^7.15.8",
+		"@babel/node": "^7.15.8",
+		"@babel/plugin-proposal-decorators": "^7.15.8",
+		"@babel/preset-env": "^7.15.8",
+		"@babel/preset-typescript": "^7.15.0",
 		"@vercel/next": "^2.7.9",
 		"@vercel/node": "^1.12.1"
-	},
-	"engines": {
-		"node": ">=0.10.3 <15"
-	  }
+	}
 }

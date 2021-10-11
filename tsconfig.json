@@ -3,7 +3,8 @@
 		"sourceMap": true,
 		"target": "es2017",
 		"outDir": "./dist",
-		"baseUrl": "./api",
+		"module": "commonjs",
+		"baseUrl": "./src",
 		"alwaysStrict": true,
 		"noImplicitAny": false,
 		"experimentalDecorators": true,
@@ -12,8 +13,8 @@
 		"allowSyntheticDefaultImports": true
 	},
 	"include": [
-		"api/**/*.ts"
-	],
+		"src/**/*.ts"
+, "src/index.js"	],
 	"exclude": [
 		"node_modules"
 	]
